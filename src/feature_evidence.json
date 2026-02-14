@@ -1,0 +1,78 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-consultation-contact-section-to-display-the-provided-phone-number-and-email-address-replacing-the-current-placeholder-phone-number-and-existing-email-text",
+      "featureTitle": "Update the consultation/contact section to display the provided phone number and email address, replacing the current placeholder phone number and existing email text.",
+      "files": [
+        "frontend/src/components/marketing/ConsultationSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-clickable-whatsapp-cta-button-that-opens-a-direct-whatsapp-chat-to-the-number-918780410844-using-a-standard-whatsapp-deep-link-so-users-can-click-and-start-chatting-immediately",
+      "featureTitle": "Add a clickable WhatsApp CTA button that opens a direct WhatsApp chat to the number 918780410844 using a standard WhatsApp deep link, so users can click and start chatting immediately.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/WhatsAppChatButton.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-make-the-whatsapp-contact-area-in-the-consultation-contact-section-actionable-by-linking-it-to-the-same-whatsapp-direct-chat-url-for-918780410844",
+      "featureTitle": "Make the WhatsApp contact area in the consultation/contact section actionable by linking it to the same WhatsApp direct chat URL for 918780410844.",
+      "files": [
+        "frontend/src/components/marketing/ConsultationSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-site-footer-contact-area-to-include-the-provided-phone-number-and-email-address-and-optionally-include-a-whatsapp-chat-link-so-the-contact-details-are-visible-outside-the-consultation-section-as-well",
+      "featureTitle": "Update the site footer contact area to include the provided phone number and email address (and optionally include a WhatsApp chat link) so the contact details are visible outside the consultation section as well.",
+      "files": [
+        "frontend/src/components/marketing/SiteFooter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

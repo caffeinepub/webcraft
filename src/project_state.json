@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a clean, modern 2-page marketing website for a web design agency (Webraft) targeting local businesses in India, with a warm/professional premium style and a Home + Pricing page.",
+  "architectural_notes": [
+    "Project name: Webraft.",
+    "Site structure: 2 pages (Home, Pricing).",
+    "Design direction: warm, professional, trustworthy, modern; lots of whitespace; strong typography hierarchy; deep blue/purple gradient accents on clean white backgrounds; soft shadows and subtle rounded corners.",
+    "Home page sections: Hero (headline, subheadline, 2 CTAs, laptop mockup, gradient background), Why Website Matters (2x2 icon cards), Services (4–5 icon feature blocks), Process (horizontal 4 steps), Final centered CTA.",
+    "Pricing page: 3 vertical pricing cards centered; middle plan visually highlighted as 'Most Popular'; each plan has 'Get Started' CTA.",
+    "Add a WhatsApp CTA button (wa.me deep link) that opens direct chat to +91 8780410844, and surface phone/WhatsApp + email contact details on the site."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-2-page-marketing-website-for-the-web-design-agency-named-webraft-with-routes-pages-for-home-and-pricing-including-clear-navigation-between-them-e-g-header-nav-links-and-cta-links",
+      "title": "Create a 2-page marketing website for the web design agency named \"webraft\" with routes/pages for Home and Pricing, including clear navigation between them (e.g., header nav links and CTA links).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-home-page-layout-with-the-following-sections-in-order-matching-the-provided-copy-and-layout-constraints-1-hero-with-left-text-two-cta-buttons-and-right-side-laptop-mockup-image-2-why-a-website-matters-section-with-heading-short-paragraph-and-a-2x2-grid-of-icon-cards-3-services-what-we-provide-with-heading-and-4-5-minimal-feature-cards-with-icons-4-our-process-with-heading-and-a-horizontal-4-step-numbered-indicator-5-final-call-to-action-section-with-centered-headline-and-one-strong-cta",
+      "title": "Implement the Home page layout with the following sections in order, matching the provided copy and layout constraints: (1) Hero with left text + two CTA buttons and right-side laptop mockup image; (2) Why a Website Matters section with heading, short paragraph, and a 2x2 grid of icon cards; (3) Services/What We Provide with heading and 4–5 minimal feature cards with icons; (4) Our Process with heading and a horizontal 4-step numbered indicator; (5) Final Call To Action section with centered headline and one strong CTA.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-pricing-page-with-three-centered-vertical-pricing-cards-and-the-exact-plan-names-prices-included-items-and-maintenance-hosting-notes-as-provided-visually-highlight-the-middle-plan-as-most-popular-and-add-a-get-started-cta-button-under-each-plan",
+      "title": "Implement the Pricing page with three centered vertical pricing cards and the exact plan names, prices, included items, and maintenance/hosting notes as provided; visually highlight the middle plan as \"Most Popular\" and add a \"Get Started\" CTA button under each plan.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-specified-visual-design-system-site-wide-warm-premium-but-approachable-modern-feel-with-lots-of-white-space-strong-typography-hierarchy-modern-sans-serif-typography-soft-shadows-subtle-rounded-corners-consistent-accent-color-usage-and-a-deep-blue-purple-gradient-used-in-hero-background-accents-with-clean-white-background-sections",
+      "title": "Apply the specified visual design system site-wide: warm, premium-but-approachable modern feel with lots of white space, strong typography hierarchy, modern sans-serif typography, soft shadows, subtle rounded corners, consistent accent color usage, and a deep blue + purple gradient used in hero/background accents with clean white background sections.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-cta-interactions-view-pricing-navigates-to-the-pricing-page-book-free-consultation-navigates-to-a-consultation-contact-section-on-the-home-page-or-opens-an-on-page-consultation-panel-without-requiring-backend-persistence",
+      "title": "Wire the CTA interactions: \"View Pricing\" navigates to the Pricing page; \"Book Free Consultation\" navigates to a consultation/contact section on the Home page (or opens an on-page consultation panel) without requiring backend persistence.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-and-use-professional-website-mockup-imagery-in-the-home-hero-modern-laptop-mockup-showing-a-website-and-a-subtle-abstract-gradient-background-treatment-behind-the-hero-smooth-abstract-shapes-store-generated-images-as-static-assets-and-reference-them-directly-from-the-frontend",
+      "title": "Add and use professional website mockup imagery in the Home hero (modern laptop mockup showing a website) and a subtle abstract gradient background treatment behind the hero (smooth abstract shapes). Store generated images as static assets and reference them directly from the frontend.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-consultation-contact-section-to-display-the-provided-phone-number-and-email-address-replacing-the-current-placeholder-phone-number-and-existing-email-text",
+      "title": "Update the consultation/contact section to display the provided phone number and email address, replacing the current placeholder phone number and existing email text.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clickable-whatsapp-cta-button-that-opens-a-direct-whatsapp-chat-to-the-number-918780410844-using-a-standard-whatsapp-deep-link-so-users-can-click-and-start-chatting-immediately",
+      "title": "Add a clickable WhatsApp CTA button that opens a direct WhatsApp chat to the number 918780410844 using a standard WhatsApp deep link, so users can click and start chatting immediately.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-whatsapp-contact-area-in-the-consultation-contact-section-actionable-by-linking-it-to-the-same-whatsapp-direct-chat-url-for-918780410844",
+      "title": "Make the WhatsApp contact area in the consultation/contact section actionable by linking it to the same WhatsApp direct chat URL for 918780410844.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-footer-contact-area-to-include-the-provided-phone-number-and-email-address-and-optionally-include-a-whatsapp-chat-link-so-the-contact-details-are-visible-outside-the-consultation-section-as-well",
+      "title": "Update the site footer contact area to include the provided phone number and email address (and optionally include a WhatsApp chat link) so the contact details are visible outside the consultation section as well.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create 2-page website: Home page with specified sections (Hero, Why Website Matters, Services, Process, Final CTA)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create Pricing page with 3 centered pricing cards and highlight the middle plan as 'Most Popular'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Apply visual design system: deep blue/purple gradients + white sections, strong typography hierarchy, modern spacing, soft shadows, subtle rounded corners, consistent accent color, smooth scrolling feel",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Include professional website/laptop mockup imagery in the hero section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add CTA buttons: Home (View Pricing, Book Free Consultation) and Pricing (Get Started under each plan)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add visible contact details (phone/WhatsApp +91 8780410844 and email freelancingdurg@gmail.com) and a clickable WhatsApp button that opens a direct chat to 918780410844",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "webraft",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

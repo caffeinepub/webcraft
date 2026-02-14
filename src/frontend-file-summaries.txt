@@ -1,0 +1,14 @@
+{
+  "frontend/src/index.css": "Global styles with custom OKLCH color system for deep blue/purple gradient palette, Poppins + Inter typography, smooth scrolling, and gradient utility classes.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with custom soft shadow utilities and design tokens matching the premium modern aesthetic.",
+  "frontend/src/App.tsx": "Root application component with simple client-side routing between Home and Pricing pages, shared header/footer layout, and global WhatsApp chat button.",
+  "frontend/src/components/marketing/SiteHeader.tsx": "Sticky header with webraft branding, navigation links to Home/Pricing, and Get Started CTA button.",
+  "frontend/src/components/marketing/SiteFooter.tsx": "Footer with webraft branding, quick links, contact section displaying phone +91 8780410844, email freelancingdurg@gmail.com, and WhatsApp chat link, plus Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/pages/HomePage.tsx": "Complete home page with Hero (gradient background + laptop mockup), Why Website Matters (2x2 icon grid), Services (5 feature cards), Process (4 steps), Consultation section, and Final CTA.",
+  "frontend/src/pages/PricingPage.tsx": "Pricing page with three vertical pricing cards (Essential, Growth highlighted as Most Popular, Premium) and what's included section.",
+  "frontend/src/components/marketing/IconCard.tsx": "Reusable card component with icon, title, and description for feature displays with hover effects.",
+  "frontend/src/components/marketing/ProcessSteps.tsx": "Horizontal 4-step process indicator with numbered badges and icons for Consultation, Design, Development, Launch.",
+  "frontend/src/components/marketing/PricingCard.tsx": "Reusable pricing card component with optional \"Most Popular\" emphasis, feature list, maintenance info, and Get Started CTA.",
+  "frontend/src/components/marketing/ConsultationSection.tsx": "Contact section with updated contact info cards showing phone +91 8780410844 and email freelancingdurg@gmail.com, with clickable WhatsApp card linking to wa.me/918780410844, plus a frontend-only consultation form.",
+  "frontend/src/components/marketing/WhatsAppChatButton.tsx": "Fixed floating WhatsApp chat button component that opens a direct WhatsApp chat to 918780410844 in a new tab."
+}

@@ -1,0 +1,99 @@
+{
+  "kind": "build_request",
+  "title": "Add clickable WhatsApp chat button and update contact details (phone + email)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Update the consultation/contact section to display the provided phone number and email address, replacing the current placeholder phone number and existing email text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "PHONE NUMBER / WHATSAPP NUMBER =  +91 8780410844  EMAIL ID  freelancingdurg@gmail.com"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the consultation section contact cards, the phone number is shown as \"+91 8780410844\" (no placeholders like \"+91 XXX XXX XXXX\").",
+        "In the consultation section contact cards, the email is shown as \"freelancingdurg@gmail.com\" (replacing any existing email such as \"hello@webraft.in\").",
+        "All user-facing text remains in English."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add a clickable WhatsApp CTA button that opens a direct WhatsApp chat to the number 918780410844 using a standard WhatsApp deep link, so users can click and start chatting immediately.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "and add whatsapp button so user can click and directly chat with me on 918780410844"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A visible WhatsApp button exists on the site and is clearly labeled for WhatsApp chat.",
+        "Clicking the WhatsApp button opens a WhatsApp chat link targeting phone number \"918780410844\" (e.g., https://wa.me/918780410844).",
+        "The link opens in a new tab/window (or otherwise does not break the current browsing session) and works on both desktop and mobile browsers."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Make the WhatsApp contact area in the consultation/contact section actionable by linking it to the same WhatsApp direct chat URL for 918780410844.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "add whatsapp button so user can click and directly chat with me on 918780410844"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The WhatsApp card/row in the consultation section is clickable (or contains a button/link) that opens https://wa.me/918780410844.",
+        "No backend changes are required for this interaction."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Update the site footer contact area to include the provided phone number and email address (and optionally include a WhatsApp chat link) so the contact details are visible outside the consultation section as well.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "PHONE NUMBER / WHATSAPP NUMBER =  +91 8780410844  EMAIL ID  freelancingdurg@gmail.com"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer ‘Contact’ section includes \"+91 8780410844\" and \"freelancingdurg@gmail.com\".",
+        "If a WhatsApp link is included in the footer, it points to https://wa.me/918780410844."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (compose existing UI components instead).",
+    "Do not require any backend persistence or backend API calls for WhatsApp/contact interactions."
+  ],
+  "nonGoals": [
+    "Implementing a backend-powered contact form submission or email sending.",
+    "Adding third-party chat widgets, analytics, or WhatsApp Business API integrations."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

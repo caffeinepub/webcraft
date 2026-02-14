@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no functionality.",
+  "feature_evidence.json": "Feature evidence report listing implemented features, related files, components, tests, and confidence levels.",
+  "frontend-file-summaries.txt": "Text file summarizing each frontend file's purpose and functionality.",
+  "frontend/index.css": "Tailwind base layer defining theme variables, dark mode tokens, and global styles.",
+  "frontend/index.html": "Basic HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Main React component handling simple navigation, layout, and global WhatsApp chat button.",
+  "frontend/src/components/marketing/ConsultationSection.tsx": "Consultation section with contact cards, WhatsApp link, and a frontend-only form.",
+  "frontend/src/components/marketing/IconCard.tsx": "Reusable marketing card displaying an icon, title, and description.",
+  "frontend/src/components/marketing/PricingCard.tsx": "Reusable pricing card with feature lists, optional 'Most Popular' badge, and CTA.",
+  "frontend/src/components/marketing/ProcessSteps.tsx": "Four-step process display with icons for consultation, design, development, and launch.",
+  "frontend/src/components/marketing/SiteFooter.tsx": "Footer with branding, navigation links, contact info, and WhatsApp chat link.",
+  "frontend/src/components/marketing/SiteHeader.tsx": "Renders a sticky site header with navigation buttons and a scroll-to-consultation action.",
+  "frontend/src/components/marketing/WhatsAppChatButton.tsx": "Provides a fixed WhatsApp chat button linking to a preset number.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor tied to the user's identity and refreshes dependent queries.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements an Internet Identity auth provider and hook for login, logout, and identity state.",
+  "frontend/src/index.css": "Defines global Tailwind styles, fonts, color variables, gradients, and utility classes.",
+  "frontend/src/main.tsx": "Bootstraps the app with React, React Query, and the Internet Identity provider.",
+  "frontend/src/pages/HomePage.tsx": "Displays the homepage with a hero section, benefits, visuals, and consultation call-to-actions.",
+  "frontend/src/pages/PricingPage.tsx": "Shows pricing tiers with feature lists and additional info sections.",
+  "frontend/tailwind.config.js": "Configures Tailwind theme extensions, colors, shadows, animations, and plugins.",
+  "project_state.json": "Defines the project’s schema, goals, design direction, required pages, and existing implemented features for a 2‑page Webraft marketing site. Contains architectural notes, requirements, and metadata for build planning."
+}
