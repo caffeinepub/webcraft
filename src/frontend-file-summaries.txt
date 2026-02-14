@@ -1,14 +1,16 @@
 {
-  "frontend/src/index.css": "Global styles with custom OKLCH color system for deep blue/purple gradient palette, Poppins + Inter typography, smooth scrolling, and gradient utility classes.",
-  "frontend/tailwind.config.js": "Extended Tailwind configuration with custom soft shadow utilities and design tokens matching the premium modern aesthetic.",
-  "frontend/src/App.tsx": "Root application component with simple client-side routing between Home and Pricing pages, shared header/footer layout, and global WhatsApp chat button.",
-  "frontend/src/components/marketing/SiteHeader.tsx": "Sticky header with webraft branding, navigation links to Home/Pricing, and Get Started CTA button.",
-  "frontend/src/components/marketing/SiteFooter.tsx": "Footer with webraft branding, quick links, contact section displaying phone +91 8780410844, email freelancingdurg@gmail.com, and WhatsApp chat link, plus Caffeine.ai attribution with UTM tracking.",
-  "frontend/src/pages/HomePage.tsx": "Complete home page with Hero (gradient background + laptop mockup), Why Website Matters (2x2 icon grid), Services (5 feature cards), Process (4 steps), Consultation section, and Final CTA.",
-  "frontend/src/pages/PricingPage.tsx": "Pricing page with three vertical pricing cards (Essential, Growth highlighted as Most Popular, Premium) and what's included section.",
-  "frontend/src/components/marketing/IconCard.tsx": "Reusable card component with icon, title, and description for feature displays with hover effects.",
-  "frontend/src/components/marketing/ProcessSteps.tsx": "Horizontal 4-step process indicator with numbered badges and icons for Consultation, Design, Development, Launch.",
-  "frontend/src/components/marketing/PricingCard.tsx": "Reusable pricing card component with optional \"Most Popular\" emphasis, feature list, maintenance info, and Get Started CTA.",
-  "frontend/src/components/marketing/ConsultationSection.tsx": "Contact section with updated contact info cards showing phone +91 8780410844 and email freelancingdurg@gmail.com, with clickable WhatsApp card linking to wa.me/918780410844, plus a frontend-only consultation form.",
-  "frontend/src/components/marketing/WhatsAppChatButton.tsx": "Fixed floating WhatsApp chat button component that opens a direct WhatsApp chat to 918780410844 in a new tab."
+  "frontend/src/index.css": "Global styles with premium minimal design system using OKLCH colors (black/white + deep blue accent), Space Grotesk + Inter typography, subtle animation keyframes (fade-in, slide-up), and mobile-safe input sizing.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with premium shadow utilities, generous spacing tokens, display typography sizes, and animation utilities for the minimal high-end aesthetic.",
+  "frontend/src/App.tsx": "Root application component with client-side routing between Home and Pricing pages, shared header/footer layout, global WhatsApp chat button, and a dedicated navigateToConsultation handler that navigates to Home and smoothly scrolls to the consultation section.",
+  "frontend/src/components/marketing/SiteHeader.tsx": "Sticky header with minimal design, clean typography, mobile hamburger menu, and single-accent CTA button preserving all navigation behavior.",
+  "frontend/src/components/marketing/SiteFooter.tsx": "Clean professional footer with generous spacing, three-column layout, contact links, and caffeine.ai attribution using single-accent color scheme.",
+  "frontend/src/pages/HomePage.tsx": "Complete home page with premium minimal design featuring hero with strong headline, value proposition, comprehensive services, why choose us stats, portfolio showcase, 3-step process, consultation form, and final CTA—all with Reveal animations.",
+  "frontend/src/pages/PricingPage.tsx": "Pricing page with minimal hero, three pricing tiers (Essential, Growth, Premium) in clean cards with single-accent styling, and detailed what's included section—all with Reveal animations.",
+  "frontend/src/components/marketing/IconCard.tsx": "Feature card component with premium minimal styling, single-accent icon background, and clean typography hierarchy.",
+  "frontend/src/components/marketing/ProcessSteps.tsx": "Three-step process section with numbered cards showing Discovery, Design & Build, and Launch & Grow phases, each with icons and descriptions in a clean grid.",
+  "frontend/src/components/marketing/PricingCard.tsx": "Refined pricing card with clean borders, subtle shadows, single-accent emphasis for popular badge and pricing, and consistent spacing throughout.",
+  "frontend/src/components/marketing/ConsultationSection.tsx": "Consultation section with contact cards and form in premium minimal styling, using single accent color for icons and CTAs while preserving all contact destinations.",
+  "frontend/src/components/marketing/WhatsAppChatButton.tsx": "Floating WhatsApp button with single-accent styling, premium shadows, and safe-area-inset positioning for mobile devices.",
+  "frontend/src/components/marketing/Reveal.tsx": "Lightweight IntersectionObserver-based component that triggers slide-up fade-in animations when elements enter viewport, with configurable delay and reduced-motion support.",
+  "frontend/src/components/marketing/PortfolioSection.tsx": "Portfolio showcase section displaying three project cards with hover effects, category labels, and updated premium portfolio images in a responsive grid layout."
 }

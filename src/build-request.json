@@ -1,90 +1,62 @@
 {
   "kind": "build_request",
-  "title": "Add clickable WhatsApp chat button and update contact details (phone + email)",
+  "title": "Regenerate the three portfolio section images",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-7",
-      "text": "Update the consultation/contact section to display the provided phone number and email address, replacing the current placeholder phone number and existing email text.",
-      "target": "frontend",
+      "id": "REQ-1",
+      "text": "Create updated premium, minimal portfolio thumbnail images for the three <img> elements in the Home page Portfolio/Recent Work section (the 3 project card images), keeping a consistent visual style across all three images and maintaining the existing 1200x900 dimensions.",
+      "target": "both",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-4"
         ],
         "quotes": [
-          "PHONE NUMBER / WHATSAPP NUMBER =  +91 8780410844  EMAIL ID  freelancingdurg@gmail.com"
+          "make website images here"
         ]
       },
       "acceptanceCriteria": [
-        "In the consultation section contact cards, the phone number is shown as \"+91 8780410844\" (no placeholders like \"+91 XXX XXX XXXX\").",
-        "In the consultation section contact cards, the email is shown as \"freelancingdurg@gmail.com\" (replacing any existing email such as \"hello@webraft.in\").",
-        "All user-facing text remains in English."
+        "Three new/updated portfolio thumbnails exist as static assets under frontend/public/assets/generated with the filenames specified in imageRequirements.edits targets.",
+        "Each image is 1200x900 and visually consistent with the site’s premium minimal aesthetic (clean, modern, minimal color, subtle lighting; no busy multicolor gradients).",
+        "The three images are distinct from one another (not duplicates) while still matching as a set."
       ]
     },
     {
-      "id": "REQ-8",
-      "text": "Add a clickable WhatsApp CTA button that opens a direct WhatsApp chat to the number 918780410844 using a standard WhatsApp deep link, so users can click and start chatting immediately.",
+      "id": "REQ-2",
+      "text": "Update the Portfolio section to use the newly generated portfolio image filenames for the three project cards (only the selected Portfolio <img> elements in section 5).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-4"
         ],
         "quotes": [
-          "and add whatsapp button so user can click and directly chat with me on 918780410844"
+          "make website images here"
         ]
       },
       "acceptanceCriteria": [
-        "A visible WhatsApp button exists on the site and is clearly labeled for WhatsApp chat.",
-        "Clicking the WhatsApp button opens a WhatsApp chat link targeting phone number \"918780410844\" (e.g., https://wa.me/918780410844).",
-        "The link opens in a new tab/window (or otherwise does not break the current browsing session) and works on both desktop and mobile browsers."
-      ]
-    },
-    {
-      "id": "REQ-9",
-      "text": "Make the WhatsApp contact area in the consultation/contact section actionable by linking it to the same WhatsApp direct chat URL for 918780410844.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "add whatsapp button so user can click and directly chat with me on 918780410844"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The WhatsApp card/row in the consultation section is clickable (or contains a button/link) that opens https://wa.me/918780410844.",
-        "No backend changes are required for this interaction."
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "text": "Update the site footer contact area to include the provided phone number and email address (and optionally include a WhatsApp chat link) so the contact details are visible outside the consultation section as well.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "PHONE NUMBER / WHATSAPP NUMBER =  +91 8780410844  EMAIL ID  freelancingdurg@gmail.com"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Footer ‘Contact’ section includes \"+91 8780410844\" and \"freelancingdurg@gmail.com\".",
-        "If a WhatsApp link is included in the footer, it points to https://wa.me/918780410844."
+        "frontend/src/components/marketing/PortfolioSection.tsx references the new portfolio image paths for the three projects.",
+        "Only the portfolio card images in the Portfolio section are changed; no other images/sections are modified.",
+        "The Portfolio section renders without broken images (no 404s) and the images maintain the existing aspect ratio and object-cover behavior."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui (compose existing UI components instead).",
-    "Do not require any backend persistence or backend API calls for WhatsApp/contact interactions."
+    "Apply changes ONLY to the three selected Portfolio section <img> elements (the three project card images in section 5); do not modify other page elements or other images.",
+    "Keep image dimensions at 1200x900 and keep the existing Portfolio layout and hover behavior intact.",
+    "Do not modify files under frontend/src/components/ui or other frontend immutablePaths listed in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Implementing a backend-powered contact form submission or email sending.",
-    "Adding third-party chat widgets, analytics, or WhatsApp Business API integrations."
+    "Changing hero images, background textures, or any non-portfolio imagery.",
+    "Changing portfolio copy (titles/categories/descriptions) or adding/removing portfolio items.",
+    "Backend changes or adding new backend methods."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": []
+    "edits": [
+      "Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-1.dim_1200x900.png > portfolio-1-premium.dim_1200x900.png)",
+      "Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-2.dim_1200x900.png > portfolio-2-premium.dim_1200x900.png)",
+      "Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-3.dim_1200x900.png > portfolio-3-premium.dim_1200x900.png)"
+    ]
   },
   "userProfileUpdate": {
     "goalsToAdd": [],

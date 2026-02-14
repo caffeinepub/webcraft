@@ -1,72 +1,47 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add WhatsApp chat CTA and update site contact details",
+  "title": "Premium minimal portfolio thumbnails regeneration and wiring",
   "requirements": [
     {
-      "id": "REQ-7",
-      "summary": "Replace placeholder phone and existing email text in the consultation/contact section with the provided phone number and email address.",
+      "id": "REQ-1",
+      "summary": "Regenerate three premium minimal 1200x900 portfolio thumbnails as new static assets with consistent style.",
       "acceptanceCriteria": [
-        "In the consultation section contact cards, the phone number is shown as \"+91 8780410844\" (no placeholders like \"+91 XXX XXX XXXX\").",
-        "In the consultation section contact cards, the email is shown as \"freelancingdurg@gmail.com\" (replacing any existing email such as \"hello@webraft.in\").",
-        "All user-facing text remains in English."
+        "Three new/updated portfolio thumbnails exist as static assets under frontend/public/assets/generated with the filenames specified in imageRequirements.edits targets.",
+        "Each image is 1200x900 and visually consistent with the site’s premium minimal aesthetic (clean, modern, minimal color, subtle lighting; no busy multicolor gradients).",
+        "The three images are distinct from one another (not duplicates) while still matching as a set."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/marketing/ConsultationSection.tsx",
-          "operation": "modify",
-          "description": "Update the consultation contact cards to display phone \"+91 8780410844\" and email \"freelancingdurg@gmail.com\" (replacing placeholders). Prefer making these actionable via standard tel: and mailto: links while keeping the UI composed from existing shadcn-ui Card primitives—verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Add a visible WhatsApp CTA button that opens a direct WhatsApp chat to 918780410844 via a standard deep link.",
-      "acceptanceCriteria": [
-        "A visible WhatsApp button exists on the site and is clearly labeled for WhatsApp chat.",
-        "Clicking the WhatsApp button opens a WhatsApp chat link targeting phone number \"918780410844\" (e.g., https://wa.me/918780410844).",
-        "The link opens in a new tab/window (or otherwise does not break the current browsing session) and works on both desktop and mobile browsers."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/WhatsAppChatButton.tsx",
+          "path": "frontend/public/assets/generated/portfolio-1-premium.dim_1200x900.png",
           "operation": "create",
-          "description": "Create a reusable WhatsApp CTA component that renders a clearly-labeled button linking to https://wa.me/918780410844 with target=\"_blank\" and rel=\"noopener noreferrer\". Compose with existing shadcn-ui Button (and optional lucide icon) without editing ui component source—verify the component's usage instructions before implementing."
+          "description": "Add the regenerated premium minimal portfolio thumbnail (modern device/browser frame, monochrome with subtle single-accent highlights) at 1200x900."
         },
         {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Wire the global WhatsApp CTA into the app shell so it is visible site-wide (e.g., rendered alongside header/main/footer layout). Ensure it opens the wa.me link in a new tab and does not interfere with page switching—verify the component's usage instructions before implementing."
+          "path": "frontend/public/assets/generated/portfolio-2-premium.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the regenerated premium minimal portfolio thumbnail (modern device/browser frame, monochrome with subtle single-accent highlights) at 1200x900."
+        },
+        {
+          "path": "frontend/public/assets/generated/portfolio-3-premium.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the regenerated premium minimal portfolio thumbnail (modern device/browser frame, monochrome with subtle single-accent highlights) at 1200x900."
         }
       ]
     },
     {
-      "id": "REQ-9",
-      "summary": "Make the WhatsApp contact area in the consultation/contact section clickable and linked to the direct WhatsApp chat URL for 918780410844.",
+      "id": "REQ-2",
+      "summary": "Update the Portfolio section to reference the newly generated portfolio thumbnail filenames for the three project cards only.",
       "acceptanceCriteria": [
-        "The WhatsApp card/row in the consultation section is clickable (or contains a button/link) that opens https://wa.me/918780410844.",
-        "No backend changes are required for this interaction."
+        "frontend/src/components/marketing/PortfolioSection.tsx references the new portfolio image paths for the three projects.",
+        "Only the portfolio card images in the Portfolio section are changed; no other images/sections are modified.",
+        "The Portfolio section renders without broken images (no 404s) and the images maintain the existing aspect ratio and object-cover behavior."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/marketing/ConsultationSection.tsx",
+          "path": "frontend/src/components/marketing/PortfolioSection.tsx",
           "operation": "modify",
-          "description": "Update the WhatsApp contact card/row to be actionable (wrap card content with an anchor or add a clear link/button) pointing to https://wa.me/918780410844, opening in a new tab with proper rel attributes. Keep implementation frontend-only and composed using existing shadcn-ui Card/Button—verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "summary": "Update the footer contact area to show the provided phone number and email address, optionally including a WhatsApp chat link.",
-      "acceptanceCriteria": [
-        "Footer ‘Contact’ section includes \"+91 8780410844\" and \"freelancingdurg@gmail.com\".",
-        "If a WhatsApp link is included in the footer, it points to https://wa.me/918780410844."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Update the footer Contact section content to include phone \"+91 8780410844\" and email \"freelancingdurg@gmail.com\" (prefer tel:/mailto: links). Optionally add a WhatsApp chat link pointing to https://wa.me/918780410844 that opens in a new tab. Keep all user-facing text in English and avoid backend calls—verify the component's usage instructions before implementing."
+          "description": "Update only the three project card image string values to use /assets/generated/portfolio-1-premium.dim_1200x900.png, /assets/generated/portfolio-2-premium.dim_1200x900.png, and /assets/generated/portfolio-3-premium.dim_1200x900.png; keep layout, aspect ratio, and hover/object-cover behavior unchanged."
         }
       ]
     }
