@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Regenerate the three Portfolio/Recent Work project card thumbnail images with a consistent premium minimal aesthetic and update the Portfolio section to reference the new image filenames.
+**Goal:** Reduce the header brand text size on mobile so it fits without overflowing, while keeping the current desktop appearance.
 
 **Planned changes:**
-- Create three updated premium minimal portfolio thumbnails (1200x900), distinct but visually consistent as a set, saved as new static assets under `frontend/public/assets/generated`.
-- Update `frontend/src/components/marketing/PortfolioSection.tsx` to use the new portfolio image paths for the three project cards only.
+- Update only the header brand text `<span>` (SiteHeader, XPath: `/html/body/div/div/header/div/button/div/span`) to use a smaller font size on small/mobile viewports.
+- Preserve existing desktop sizing and styling (md and up remains visually equivalent to the current `text-2xl` appearance).
 
-**User-visible outcome:** The Home page Portfolio/Recent Work section displays three refreshed, premium minimal thumbnails (no broken images), while the layout and hover behavior remain unchanged.
+**User-visible outcome:** On mobile, the header brand text fits within the header without overflow or layout issues, while desktop styling remains unchanged.

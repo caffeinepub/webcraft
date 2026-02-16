@@ -28,34 +28,36 @@ export default function SiteHeader({ currentPage, onNavigate }: SiteHeaderProps)
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
-      <div className="container flex h-20 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
         <button
           onClick={() => handleNavigation('home')}
-          className="flex items-center space-x-2 transition-opacity hover:opacity-70"
+          className="flex items-center space-x-2 transition-opacity hover:opacity-80"
         >
-          <span className="text-2xl font-bold tracking-tight">webraft</span>
+          <div className="flex items-center">
+            <span className="text-sm sm:text-base md:text-2xl font-bold text-gradient">Website Developer in Ahmedabad | Webraft Agency</span>
+          </div>
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           <Button
             variant="ghost"
             onClick={() => onNavigate('home')}
-            className={`text-base ${currentPage === 'home' ? 'text-primary' : 'text-muted-foreground'}`}
+            className={currentPage === 'home' ? 'text-primary' : ''}
           >
             Home
           </Button>
           <Button
             variant="ghost"
             onClick={() => onNavigate('pricing')}
-            className={`text-base ${currentPage === 'pricing' ? 'text-primary' : 'text-muted-foreground'}`}
+            className={currentPage === 'pricing' ? 'text-primary' : ''}
           >
             Pricing
           </Button>
           <Button
             onClick={handleGetStarted}
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="gradient-blue-purple text-white hover:opacity-90"
           >
             Get Started
           </Button>
@@ -76,25 +78,25 @@ export default function SiteHeader({ currentPage, onNavigate }: SiteHeaderProps)
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t bg-background/95 backdrop-blur-md">
-          <nav className="container py-6 flex flex-col gap-3">
+        <div className="md:hidden border-t bg-background/95 backdrop-blur">
+          <nav className="container py-4 flex flex-col gap-2">
             <Button
               variant="ghost"
               onClick={() => handleNavigation('home')}
-              className={`justify-start text-base ${currentPage === 'home' ? 'text-primary' : 'text-muted-foreground'}`}
+              className={`justify-start ${currentPage === 'home' ? 'text-primary' : ''}`}
             >
               Home
             </Button>
             <Button
               variant="ghost"
               onClick={() => handleNavigation('pricing')}
-              className={`justify-start text-base ${currentPage === 'pricing' ? 'text-primary' : 'text-muted-foreground'}`}
+              className={`justify-start ${currentPage === 'pricing' ? 'text-primary' : ''}`}
             >
               Pricing
             </Button>
             <Button
               onClick={handleGetStarted}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
+              className="gradient-blue-purple text-white hover:opacity-90 mt-2"
             >
               Get Started
             </Button>

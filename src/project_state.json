@@ -3,29 +3,22 @@
   "projectStateVersion": 3,
   "summary": "New project",
   "architectural_notes": [],
-  "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-1.dim_1200x900.png > portfolio-1-premium.dim_1200x900.png)\n- Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-2.dim_1200x900.png > portfolio-2-premium.dim_1200x900.png)\n- Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-3.dim_1200x900.png > portfolio-3-premium.dim_1200x900.png)",
+  "known_issues": [
+    "Text size is too large on mobile; does not fit well / causes layout issues."
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
-      "id": "feature-create-updated-premium-minimal-portfolio-thumbnail-images-for-the-three-img-elements-in-the-home-page-portfolio-recent-work-section-the-3-project-card-images-keeping-a-consistent-visual-style-across-all-three-images-and-maintaining-the-existing-1200x900-dimensions",
-      "title": "Create updated premium, minimal portfolio thumbnail images for the three <img> elements in the Home page Portfolio/Recent Work section (the 3 project card images), keeping a consistent visual style across all three images and maintaining the existing 1200x900 dimensions.",
+      "id": "feature-update-the-selected-header-brand-text-element-html-body-div-div-header-div-button-div-span-to-use-a-smaller-font-size-on-mobile-so-the-text-fits-without-overflowing-while-keeping-the-existing-desktop-sizing-and-styling",
+      "title": "Update the selected header brand text element (/html/body/div/div/header/div/button/div/span) to use a smaller font size on mobile so the text fits without overflowing, while keeping the existing desktop sizing and styling.",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-portfolio-section-to-use-the-newly-generated-portfolio-image-filenames-for-the-three-project-cards-only-the-selected-portfolio-img-elements-in-section-5",
-      "title": "Update the Portfolio section to use the newly generated portfolio image filenames for the three project cards (only the selected Portfolio <img> elements in section 5).",
-      "reqIds": [
-        "REQ-2"
       ],
       "version": 1
     }
   ],
   "new_feature_requests": [],
-  "projectName": "Regenerate the three portfolio section images",
+  "projectName": "Webraft Agency",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

@@ -1,39 +1,24 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-14T15:46:58.294Z",
+  "generatedAt": "2026-02-16T15:55:02.884Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Create updated premium, minimal portfolio thumbnail images for the three <img> elements in the Home page Portfolio/Recent Work section (the 3 project card images), keeping a consistent visual style across all three images and maintaining the existing 1200x900 dimensions.",
+        "summary": "Update the selected header brand text element (/html/body/div/div/header/div/button/div/span) to use a smaller font size on mobile so the text fits without overflowing, while keeping the existing desktop sizing and styling.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/portfolio-1-premium.dim_1200x900.png",
-          "frontend/public/assets/generated/portfolio-2-premium.dim_1200x900.png",
-          "frontend/public/assets/generated/portfolio-3-premium.dim_1200x900.png"
+          "frontend/src/components/marketing/SiteHeader.tsx"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/portfolio-1-premium.dim_1200x900.png",
-          "frontend/public/assets/generated/portfolio-2-premium.dim_1200x900.png",
-          "frontend/public/assets/generated/portfolio-3-premium.dim_1200x900.png"
-        ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Update the Portfolio section to use the newly generated portfolio image filenames for the three project cards (only the selected Portfolio <img> elements in section 5).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/marketing/PortfolioSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/marketing/PortfolioSection.tsx"
+          "frontend/src/components/marketing/SiteHeader.tsx"
         ]
       }
     ]
@@ -43,10 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/portfolio-1-premium.dim_1200x900.png",
-    "frontend/public/assets/generated/portfolio-2-premium.dim_1200x900.png",
-    "frontend/public/assets/generated/portfolio-3-premium.dim_1200x900.png",
-    "frontend/src/components/marketing/PortfolioSection.tsx",
+    "frontend/src/components/marketing/SiteHeader.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

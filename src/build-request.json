@@ -1,71 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Regenerate the three portfolio section images",
+  "title": "Reduce header brand text size on mobile",
+  "projectName": "Webraft Agency",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Create updated premium, minimal portfolio thumbnail images for the three <img> elements in the Home page Portfolio/Recent Work section (the 3 project card images), keeping a consistent visual style across all three images and maintaining the existing 1200x900 dimensions.",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "make website images here"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Three new/updated portfolio thumbnails exist as static assets under frontend/public/assets/generated with the filenames specified in imageRequirements.edits targets.",
-        "Each image is 1200x900 and visually consistent with the site’s premium minimal aesthetic (clean, modern, minimal color, subtle lighting; no busy multicolor gradients).",
-        "The three images are distinct from one another (not duplicates) while still matching as a set."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Update the Portfolio section to use the newly generated portfolio image filenames for the three project cards (only the selected Portfolio <img> elements in section 5).",
+      "text": "Update the selected header brand text element (/html/body/div/div/header/div/button/div/span) to use a smaller font size on mobile so the text fits without overflowing, while keeping the existing desktop sizing and styling.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-6"
         ],
         "quotes": [
-          "make website images here"
+          "decrease the size of the text , it not fit well in mobile version"
         ]
       },
       "acceptanceCriteria": [
-        "frontend/src/components/marketing/PortfolioSection.tsx references the new portfolio image paths for the three projects.",
-        "Only the portfolio card images in the Portfolio section are changed; no other images/sections are modified.",
-        "The Portfolio section renders without broken images (no 404s) and the images maintain the existing aspect ratio and object-cover behavior."
+        "On small/mobile viewports, the header brand text no longer overflows the header width or causes layout issues.",
+        "On desktop viewports (md and up), the brand text remains at the current visual size (equivalent to the existing text-2xl appearance).",
+        "Only the selected element’s text sizing is changed; no other header elements (nav, buttons, menu toggle) are modified."
       ]
     }
   ],
   "constraints": [
-    "Apply changes ONLY to the three selected Portfolio section <img> elements (the three project card images in section 5); do not modify other page elements or other images.",
-    "Keep image dimensions at 1200x900 and keep the existing Portfolio layout and hover behavior intact.",
-    "Do not modify files under frontend/src/components/ui or other frontend immutablePaths listed in SYSTEM_CONTEXT."
+    "Apply changes ONLY to the selected element at XPath /html/body/div/div/header/div/button/div/span (the brand text span in SiteHeader).",
+    "Do not edit files under frontend/src/components/ui or any other immutable paths listed in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Changing hero images, background textures, or any non-portfolio imagery.",
-    "Changing portfolio copy (titles/categories/descriptions) or adding/removing portfolio items.",
-    "Backend changes or adding new backend methods."
+    "Do not change the brand text content.",
+    "Do not redesign the header layout or navigation behavior.",
+    "Do not add new pages, routes, or backend changes."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": [
-      "Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-1.dim_1200x900.png > portfolio-1-premium.dim_1200x900.png)",
-      "Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-2.dim_1200x900.png > portfolio-2-premium.dim_1200x900.png)",
-      "Create premium minimal mockup thumbnail with modern device/browser frame and clean UI, monochrome with subtle single-accent highlights (portfolio-3.dim_1200x900.png > portfolio-3-premium.dim_1200x900.png)"
-    ]
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
+    "edits": []
   }
 }

@@ -1,47 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Premium minimal portfolio thumbnails regeneration and wiring",
+  "title": "Reduce header brand text size on mobile (Webraft Agency)",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Regenerate three premium minimal 1200x900 portfolio thumbnails as new static assets with consistent style.",
+      "summary": "Make the SiteHeader brand text span use a smaller responsive font size on mobile while preserving the existing desktop (md+) size and styling.",
       "acceptanceCriteria": [
-        "Three new/updated portfolio thumbnails exist as static assets under frontend/public/assets/generated with the filenames specified in imageRequirements.edits targets.",
-        "Each image is 1200x900 and visually consistent with the site’s premium minimal aesthetic (clean, modern, minimal color, subtle lighting; no busy multicolor gradients).",
-        "The three images are distinct from one another (not duplicates) while still matching as a set."
+        "On small/mobile viewports, the header brand text no longer overflows the header width or causes layout issues.",
+        "On desktop viewports (md and up), the brand text remains at the current visual size (equivalent to the existing text-2xl appearance).",
+        "Only the selected element’s text sizing is changed; no other header elements (nav, buttons, menu toggle) are modified."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/portfolio-1-premium.dim_1200x900.png",
-          "operation": "create",
-          "description": "Add the regenerated premium minimal portfolio thumbnail (modern device/browser frame, monochrome with subtle single-accent highlights) at 1200x900."
-        },
-        {
-          "path": "frontend/public/assets/generated/portfolio-2-premium.dim_1200x900.png",
-          "operation": "create",
-          "description": "Add the regenerated premium minimal portfolio thumbnail (modern device/browser frame, monochrome with subtle single-accent highlights) at 1200x900."
-        },
-        {
-          "path": "frontend/public/assets/generated/portfolio-3-premium.dim_1200x900.png",
-          "operation": "create",
-          "description": "Add the regenerated premium minimal portfolio thumbnail (modern device/browser frame, monochrome with subtle single-accent highlights) at 1200x900."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Update the Portfolio section to reference the newly generated portfolio thumbnail filenames for the three project cards only.",
-      "acceptanceCriteria": [
-        "frontend/src/components/marketing/PortfolioSection.tsx references the new portfolio image paths for the three projects.",
-        "Only the portfolio card images in the Portfolio section are changed; no other images/sections are modified.",
-        "The Portfolio section renders without broken images (no 404s) and the images maintain the existing aspect ratio and object-cover behavior."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/PortfolioSection.tsx",
+          "path": "frontend/src/components/marketing/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Update only the three project card image string values to use /assets/generated/portfolio-1-premium.dim_1200x900.png, /assets/generated/portfolio-2-premium.dim_1200x900.png, and /assets/generated/portfolio-3-premium.dim_1200x900.png; keep layout, aspect ratio, and hover/object-cover behavior unchanged."
+          "description": "Update ONLY the brand text <span> within the header button (the element currently using \"text-2xl\") to use responsive Tailwind font-size classes (e.g., smaller on mobile, keep md+:text-2xl) so it fits on mobile without overflow, while preserving all other existing classes (font-bold, text-gradient) and leaving all other header elements unchanged."
         }
       ]
     }

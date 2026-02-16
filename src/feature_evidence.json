@@ -2,9 +2,11 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-updated-premium-minimal-portfolio-thumbnail-images-for-the-three-img-elements-in-the-home-page-portfolio-recent-work-section-the-3-project-card-images-keeping-a-consistent-visual-style-across-all-three-images-and-maintaining-the-existing-1200x900-dimensions",
-      "featureTitle": "Create updated premium, minimal portfolio thumbnail images for the three <img> elements in the Home page Portfolio/Recent Work section (the 3 project card images), keeping a consistent visual style across all three images and maintaining the existing 1200x900 dimensions.",
-      "files": [],
+      "featureId": "feature-update-the-selected-header-brand-text-element-html-body-div-div-header-div-button-div-span-to-use-a-smaller-font-size-on-mobile-so-the-text-fits-without-overflowing-while-keeping-the-existing-desktop-sizing-and-styling",
+      "featureTitle": "Update the selected header brand text element (/html/body/div/div/header/div/button/div/span) to use a smaller font size on mobile so the text fits without overflowing, while keeping the existing desktop sizing and styling.",
+      "files": [
+        "frontend/src/components/marketing/SiteHeader.tsx"
+      ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
@@ -14,24 +16,6 @@
       ],
       "testIds": [
         "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-portfolio-section-to-use-the-newly-generated-portfolio-image-filenames-for-the-three-project-cards-only-the-selected-portfolio-img-elements-in-section-5",
-      "featureTitle": "Update the Portfolio section to use the newly generated portfolio image filenames for the three project cards (only the selected Portfolio <img> elements in section 5).",
-      "files": [
-        "frontend/src/components/marketing/PortfolioSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
       ],
       "confidence": "high"
     }

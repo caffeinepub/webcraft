@@ -1,53 +1,61 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { MessageSquare, Palette, Rocket } from 'lucide-react';
-import Reveal from './Reveal';
+import { MessageSquare, Palette, Code, Rocket } from 'lucide-react';
+
+const steps = [
+  {
+    number: 1,
+    title: 'Consultation',
+    description: 'We discuss your business goals, target audience, and design preferences.',
+    icon: MessageSquare
+  },
+  {
+    number: 2,
+    title: 'Design',
+    description: 'Our team creates a custom design that matches your brand and vision.',
+    icon: Palette
+  },
+  {
+    number: 3,
+    title: 'Development',
+    description: 'We build your website with clean code, optimized for speed and SEO.',
+    icon: Code
+  },
+  {
+    number: 4,
+    title: 'Launch',
+    description: 'Your website goes live! We handle hosting, SSL, and final testing.',
+    icon: Rocket
+  }
+];
 
 export default function ProcessSteps() {
-  const steps = [
-    {
-      number: '01',
-      icon: MessageSquare,
-      title: 'Discovery',
-      description: 'We understand your business goals, target audience, and vision through detailed consultation.'
-    },
-    {
-      number: '02',
-      icon: Palette,
-      title: 'Design & Build',
-      description: 'Our team crafts a custom website that reflects your brand and drives conversions.'
-    },
-    {
-      number: '03',
-      icon: Rocket,
-      title: 'Launch & Grow',
-      description: 'We deploy your site and provide ongoing support to ensure continued success.'
-    }
-  ];
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto">
-      {steps.map((step, index) => (
-        <Reveal key={index} delay={index * 150}>
-          <Card className="relative border hover:shadow-premium-md transition-all duration-300 h-full">
-            <CardContent className="pt-8 pb-8 space-y-4">
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-14 h-14 rounded-lg bg-primary flex items-center justify-center">
-                  <step.icon className="w-7 h-7 text-primary-foreground" />
+    <div className="max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {steps.map((step) => {
+          const Icon = step.icon;
+          return (
+            <Card key={step.number} className="relative border-2 hover:shadow-soft-lg transition-shadow">
+              <CardContent className="pt-6 space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full gradient-blue-purple flex items-center justify-center text-white font-bold text-xl">
+                    {step.number}
+                  </div>
+                  <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
                 </div>
-                <div className="text-6xl font-bold text-muted/20 leading-none">
-                  {step.number}
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-              </div>
-              <h3 className="text-2xl font-semibold">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
-            </CardContent>
-          </Card>
-        </Reveal>
-      ))}
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
     </div>
   );
 }
